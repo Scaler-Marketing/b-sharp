@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
@@ -35,32 +35,27 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-24 md:py-32 bg-surface">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
             Real Couples, Real Moments
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-balance">
             What They <span className="text-gradient italic">Say</span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="relative">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -30 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
               className="text-center"
             >
               <Quote className="w-10 h-10 text-primary/30 mx-auto mb-6" />
-              <p className="font-display text-xl md:text-2xl text-foreground italic leading-relaxed mb-8">
+              <p className="font-display text-xl md:text-2xl text-foreground italic leading-relaxed mb-8 text-balance">
                 "{testimonials[current].quote}"
               </p>
               <p className="font-body font-semibold text-foreground text-lg">
@@ -72,7 +67,6 @@ const Testimonials = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Controls */}
           <div className="flex justify-center gap-4 mt-10">
             <button
               onClick={prev}
