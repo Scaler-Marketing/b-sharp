@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 
 const CTA = () => {
@@ -30,13 +31,13 @@ const CTA = () => {
               <Phone className="w-5 h-5" />
               508-822-4545
             </a>
-            <a
-              href="mailto:brendan@southcoastdj.com"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-foreground/20 text-foreground font-body font-semibold text-base hover:border-primary/50 hover:text-primary transition-all duration-300"
             >
               <Mail className="w-5 h-5" />
-              Email Brendan
-            </a>
+              Check Your Date
+            </Link>
           </div>
         </motion.div>
       </div>

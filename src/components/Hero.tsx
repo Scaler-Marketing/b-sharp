@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -63,18 +64,18 @@ const Hero = () => {
           transition={{ delay: 1.3 }}
           className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a
-            href="tel:508-822-4545"
+          <Link
+            to="/contact"
             className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-body font-semibold text-base hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
           >
             Check Your Date
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            to="/weddings"
             className="px-8 py-4 rounded-full border border-foreground/20 text-foreground font-body font-semibold text-base hover:border-primary/50 hover:text-primary transition-all duration-300"
           >
             View Services
-          </a>
+          </Link>
         </motion.div>
       </div>
 
