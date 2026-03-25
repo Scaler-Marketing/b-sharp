@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-[100svh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -22,7 +22,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-primary font-body text-sm md:text-base font-semibold tracking-[0.3em] uppercase mb-6"
+          className="text-primary font-body text-[10px] md:text-base font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 md:mb-6"
         >
           Rhode Island & Southern New England
         </motion.p>
@@ -31,7 +31,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.05] mb-8"
+          className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.05] mb-6 md:mb-8"
         >
           The Premier{" "}
           <span className="text-gradient italic">Wedding DJ</span>
@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="max-w-2xl mx-auto text-muted-foreground font-body text-lg md:text-xl italic leading-relaxed mb-4"
+          className="max-w-2xl mx-auto text-foreground/80 font-body text-base md:text-xl italic leading-relaxed mb-4"
         >
           "It's seeing a couple in the moment of that first dance, surrounded by
           their family, friends, and love. It's magical, and I make sure it
@@ -52,7 +52,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1 }}
-          className="text-muted-foreground font-body text-sm tracking-widest uppercase"
+          className="text-foreground/60 font-body text-xs md:text-sm tracking-widest uppercase"
         >
           — Brendan Lafferty
         </motion.p>
