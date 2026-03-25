@@ -35,16 +35,16 @@ const Hero = () => {
           — Brendan Lafferty
         </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-10 flex flex-row gap-3 justify-center">
           <Link
             to="/contact"
-            className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-body font-semibold text-base hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
+            className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
           >
             Check Your Date
           </Link>
           <Link
             to="/weddings"
-            className="px-8 py-4 rounded-full border border-foreground/20 text-foreground font-body font-semibold text-base hover:border-primary/50 hover:text-primary transition-all duration-300"
+            className="px-6 py-3 rounded-full border border-foreground/20 text-foreground font-body font-semibold text-sm hover:border-primary/50 hover:text-primary transition-all duration-300"
           >
             View Services
           </Link>
