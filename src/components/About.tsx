@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-brendan.jpg";
 
 const About = () => {
@@ -6,14 +5,7 @@ const About = () => {
     <section id="about" className="py-24 md:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)]">
               <img
                 src={aboutImg}
@@ -25,21 +17,14 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
             </div>
-            {/* Accent decoration */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl border-2 border-primary/20 -z-10" />
-          </motion.div>
+          </div>
 
-          {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
               Meet Brendan
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
               Moments Matter.{" "}
               <span className="text-gradient italic">The Music Matters.</span>
             </h2>
@@ -77,7 +62,7 @@ const About = () => {
                 <p className="text-muted-foreground font-body text-sm mt-1">Rated</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

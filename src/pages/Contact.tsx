@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,7 +16,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, open mailto
     const subject = encodeURIComponent(`Event Inquiry - ${formData.eventType} on ${formData.eventDate}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nEvent Date: ${formData.eventDate}\nEvent Type: ${formData.eventType}\nVenue: ${formData.venue}\n\nMessage:\n${formData.message}`
@@ -31,31 +29,21 @@ const Contact = () => {
 
       <section className="pt-32 pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <p className="text-primary font-body text-[10px] md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
               Let's Talk
             </p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
               Check Your <span className="text-gradient italic">Date</span>
             </h1>
-            <p className="text-muted-foreground font-body text-base md:text-xl max-w-2xl mx-auto">
+            <p className="text-muted-foreground font-body text-base md:text-xl max-w-2xl mx-auto text-balance">
               2027 dates are selling quickly, and I've just opened up the 2028 calendar.
               Let's make your event unforgettable.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-5 gap-12">
-            {/* Contact info */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="md:col-span-2 space-y-8"
-            >
+            <div className="md:col-span-2 space-y-8">
               <div>
                 <h3 className="font-display text-xl font-bold text-foreground mb-6">
                   Get in Touch
@@ -99,13 +87,9 @@ const Contact = () => {
                   <li>⭐ 5-Star rated across all platforms</li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Form */}
-            <motion.form
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
+            <form
               onSubmit={handleSubmit}
               className="md:col-span-3 p-8 rounded-2xl bg-card border border-border/50"
             >
@@ -192,7 +176,7 @@ const Contact = () => {
                 <Send className="w-5 h-5" />
                 Send Inquiry
               </button>
-            </motion.form>
+            </form>
           </div>
         </div>
       </section>

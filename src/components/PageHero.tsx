@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 interface PageHeroProps {
   eyebrow: string;
   title: string;
@@ -22,32 +20,17 @@ const PageHero = ({ eyebrow, title, titleAccent, description, image }: PageHeroP
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background" />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-primary font-body text-[10px] md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4"
-        >
+        <p className="text-primary font-body text-[10px] md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
           {eyebrow}
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7 }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6"
-        >
+        </p>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6 text-balance">
           {title}{" "}
           {titleAccent && <span className="text-gradient italic">{titleAccent}</span>}
-        </motion.h1>
+        </h1>
         {description && (
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="text-foreground/80 font-body text-base md:text-xl leading-relaxed max-w-2xl mx-auto"
-          >
+          <p className="text-foreground/80 font-body text-base md:text-xl leading-relaxed max-w-2xl mx-auto text-balance">
             {description}
-          </motion.p>
+          </p>
         )}
       </div>
     </section>

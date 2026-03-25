@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone, Music, Heart, Users, Star, Mic2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -52,19 +51,14 @@ const Weddings = () => {
         image={weddingsHero}
       />
 
-      {/* Philosophy section */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
                 My Approach
               </p>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
                 Every Song Better Than{" "}
                 <span className="text-gradient italic">the Last</span>
               </h2>
@@ -85,13 +79,8 @@ const Weddings = () => {
                   a certain couple wants and deliver that without needing a lot of guidance.
                 </p>
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)]"
-            >
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)]">
               <img
                 src={serviceWedding}
                 alt="Wedding first dance"
@@ -101,83 +90,66 @@ const Weddings = () => {
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features grid */}
       <section className="py-24 md:py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
               What's Included
             </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground text-balance">
               Full-Service <span className="text-gradient italic">Entertainment</span>
             </h2>
-          </motion.div>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, i) => (
-              <motion.div
+            {features.map((feature) => (
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300"
               >
                 <feature.icon className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                <h3 className="font-display text-xl font-bold text-foreground mb-3 text-balance">
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground font-body leading-relaxed">
                   {feature.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-              2027 Dates Selling Quickly
-            </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Let's Make It <span className="text-gradient italic">Unforgettable</span>
-            </h2>
-            <p className="text-muted-foreground font-body text-lg mb-10">
-              Call or text today to check availability for your wedding date.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:508-822-4545"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body font-semibold hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
-              >
-                <Phone className="w-5 h-5" />
-                508-822-4545
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-foreground/20 text-foreground font-body font-semibold hover:border-primary/50 hover:text-primary transition-all duration-300"
-              >
-                Check Your Date
-              </Link>
-            </div>
-          </motion.div>
+          <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+            2027 Dates Selling Quickly
+          </p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+            Let's Make It <span className="text-gradient italic">Unforgettable</span>
+          </h2>
+          <p className="text-muted-foreground font-body text-lg mb-10">
+            Call or text today to check availability for your wedding date.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:508-822-4545"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body font-semibold hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
+            >
+              <Phone className="w-5 h-5" />
+              508-822-4545
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-foreground/20 text-foreground font-body font-semibold hover:border-primary/50 hover:text-primary transition-all duration-300"
+            >
+              Check Your Date
+            </Link>
+          </div>
         </div>
       </section>
 
