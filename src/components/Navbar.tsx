@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.webp";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,8 +34,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-display text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
-          B-Sharp<span className="text-gradient"> Entertainment</span>
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <img src={logo} alt="B-Sharp Entertainment" className="h-10 w-10 rounded-full" />
+          <span className="font-display text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
+            B-Sharp<span className="text-gradient"> Entertainment</span>
+          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
