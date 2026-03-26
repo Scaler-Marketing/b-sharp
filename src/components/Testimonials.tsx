@@ -36,10 +36,10 @@ const Testimonials = () => {
     <section id="testimonials" className="py-24 md:py-32 bg-surface">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+          <p className="text-primary font-body text-fluid-sm font-semibold tracking-[0.2em] uppercase mb-4">
             Real Couples, Real Moments
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-balance">
+          <h2 className="font-display text-fluid-3xl font-bold text-foreground text-balance">
             What They <span className="text-gradient italic">Say</span>
           </h2>
         </div>
@@ -55,7 +55,7 @@ const Testimonials = () => {
               className="text-center"
             >
               <Quote className="w-10 h-10 text-primary/30 mx-auto mb-6" />
-              <p className="font-display text-xl md:text-2xl text-foreground italic leading-relaxed mb-8 text-balance">
+              <p className="font-display text-fluid-2xl text-foreground italic leading-relaxed mb-8 text-balance">
                 "{testimonials[current].quote}"
               </p>
               <p className="font-body font-semibold text-foreground text-lg">

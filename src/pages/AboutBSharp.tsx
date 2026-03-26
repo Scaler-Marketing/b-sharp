@@ -37,14 +37,14 @@ const AboutBSharp = () => {
             </div>
 
             <div>
-              <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+              <p className="text-primary font-body text-fluid-sm font-semibold tracking-[0.2em] uppercase mb-4">
                 The Man Behind the Music
               </p>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
+              <h2 className="font-display text-fluid-3xl font-bold text-foreground mb-6 leading-tight text-balance">
                 Positive and{" "}
                 <span className="text-gradient italic">Professional</span>
               </h2>
-              <div className="space-y-5 text-muted-foreground font-body text-base md:text-lg leading-relaxed">
+              <div className="space-y-5 text-muted-foreground font-body text-fluid-base leading-relaxed">
                 <p>
                   For me, it's seeing a couple in the moment of that first dance,
                   surrounded by their family, friends, and love. It's magical, and I
@@ -86,7 +86,7 @@ const AboutBSharp = () => {
       <section className="py-24 md:py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground text-balance">
+            <h2 className="font-display text-fluid-3xl font-bold text-foreground text-balance">
               More Than Just a{" "}
               <span className="text-gradient italic">Wedding DJ</span>
             </h2>
@@ -118,7 +118,7 @@ const AboutBSharp = () => {
                 className="block p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 h-full"
               >
                 <item.icon className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-display text-xl font-bold text-foreground mb-3 text-balance">
+                <h3 className="font-display text-fluid-xl font-bold text-foreground mb-3 text-balance">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground font-body leading-relaxed">
@@ -134,11 +134,11 @@ const AboutBSharp = () => {
 
       <section className="py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="font-display text-fluid-3xl font-bold text-foreground mb-6 text-balance">
             Let's Create Something{" "}
             <span className="text-gradient italic">Amazing</span>
           </h2>
-          <p className="text-muted-foreground font-body text-lg mb-10">
+          <p className="text-muted-foreground font-body text-fluid-base mb-10">
             Ready to start planning? I'd love to hear about your event.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

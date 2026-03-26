@@ -26,14 +26,14 @@ const About = () => {
           </div>
 
           <div>
-            <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-primary font-body text-fluid-sm font-semibold tracking-[0.2em] uppercase mb-4">
               Meet Brendan
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
+            <h2 className="font-display text-fluid-3xl font-bold text-foreground mb-6 leading-tight text-balance">
               Moments Matter.{" "}
               <span className="text-gradient italic">The Music Matters.</span>
             </h2>
-            <div className="space-y-5 text-muted-foreground font-body text-base md:text-lg leading-relaxed">
+            <div className="space-y-5 text-muted-foreground font-body text-fluid-base leading-relaxed">
               <p>
                 Create a list of your favorite songs. Key songs for your entrance,
                 first dance and parent dances should especially hold meaning. I

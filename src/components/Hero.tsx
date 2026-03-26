@@ -16,16 +16,16 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-28 md:pt-32 pb-20">
-        <p className="text-primary font-body text-[10px] md:text-base font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 md:mb-6">
+        <p className="text-primary font-body text-fluid-xs font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 md:mb-6">
           Rhode Island & Southern New England
         </p>
 
-        <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.15] mb-6 md:mb-8 text-balance">
+        <h1 className="font-display text-fluid-5xl font-bold text-foreground leading-[1.15] mb-6 md:mb-8 text-balance">
           The Premier{" "}
           <span className="text-gradient italic inline-block px-[0.15em] pb-[0.15em]">Wedding DJ</span>
         </h1>
 
-        <blockquote className="max-w-2xl mx-auto text-foreground/80 font-body text-base md:text-xl italic leading-relaxed mb-4 text-balance">
+        <blockquote className="max-w-2xl mx-auto text-foreground/80 font-body text-fluid-base italic leading-relaxed mb-4 text-balance">
           "It's seeing a couple in the moment of that first dance, surrounded by
           their family, friends, and love. It's magical, and I make sure it
           happens organically."
