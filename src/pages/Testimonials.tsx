@@ -46,7 +46,7 @@ const Testimonials = () => {
         image={testimonialsHero}
       />
 
-      <section className="py-20 md:py-28">
+      <section className="py-0 md:pb-28">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-10">
             {testimonials.map((t, i) => (
