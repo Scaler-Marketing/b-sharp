@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.webp";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
