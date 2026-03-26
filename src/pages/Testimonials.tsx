@@ -39,7 +39,12 @@ const Testimonials = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <PageHero eyebrow="Reviews" title="What Couples Are Saying" image={testimonialsHero} />
+      <PageHero
+        eyebrow="Reviews"
+        title="What Couples Are Saying"
+        description="Real stories from the couples and clients who trusted us with their biggest moments. From first dances to final send-offs, hear how B-Sharp Entertainment made their celebrations unforgettable."
+        image={testimonialsHero}
+      />
 
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6">
