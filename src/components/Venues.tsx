@@ -11,25 +11,29 @@ const venueNames = [
 ];
 
 const Venues = () => {
-  return (
-    <section className="py-20 border-t border-b border-border/50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <p className="text-muted-foreground font-body text-sm tracking-[0.2em] uppercase">
-            Recommended by Top MA & RI Wedding Venues
-          </p>
-        </div>
+  const doubled = [...venueNames, ...venueNames];
 
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
-          {venueNames.map((name, i) => (
+  return (
+    <section className="py-16 border-t border-b border-border/50 overflow-hidden">
+      <div className="text-center mb-10 px-6">
+        <p className="text-muted-foreground font-body text-sm tracking-[0.2em] uppercase">
+          Recommended by Top MA & RI Wedding Venues
+        </p>
+      </div>
+
+      <div className="relative">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+
+        <div className="flex animate-marquee whitespace-nowrap">
+          {doubled.map((name, i) => (
             <span
-              key={name}
-              className="font-display text-lg md:text-xl text-muted-foreground/50 hover:text-primary transition-colors duration-300 cursor-default"
+              key={i}
+              className="font-display text-lg md:text-xl text-muted-foreground/40 mx-6 inline-flex items-center gap-6 shrink-0"
             >
               {name}
-              {i < venueNames.length - 1 && (
-                <span className="ml-10 text-border">·</span>
-              )}
+              <span className="text-primary/30 text-xs">✦</span>
             </span>
           ))}
         </div>
