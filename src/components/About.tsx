@@ -1,6 +1,11 @@
 import aboutImg from "@/assets/about-brendan.jpg";
+import { useCountUp } from "@/hooks/use-count-up";
 
 const About = () => {
+  const events = useCountUp(500, 2000);
+  const years = useCountUp(15, 1500);
+  const stars = useCountUp(5, 1200);
+
   return (
     <section id="about" className="py-24 md:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-6">
@@ -48,17 +53,17 @@ const About = () => {
             </div>
             <div className="mt-8 flex items-center gap-6">
               <div className="text-center">
-                <p className="font-display text-3xl font-bold text-gradient">500+</p>
+                <p ref={events.ref as React.Ref<HTMLParagraphElement>} className="font-display text-3xl font-bold text-gradient">{events.count}+</p>
                 <p className="text-muted-foreground font-body text-sm mt-1">Events</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div className="text-center">
-                <p className="font-display text-3xl font-bold text-gradient">15+</p>
+                <p ref={years.ref as React.Ref<HTMLParagraphElement>} className="font-display text-3xl font-bold text-gradient">{years.count}+</p>
                 <p className="text-muted-foreground font-body text-sm mt-1">Years</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div className="text-center">
-                <p className="font-display text-3xl font-bold text-gradient">5★</p>
+                <p ref={stars.ref as React.Ref<HTMLParagraphElement>} className="font-display text-3xl font-bold text-gradient">{stars.count}★</p>
                 <p className="text-muted-foreground font-body text-sm mt-1">Rated</p>
               </div>
             </div>
