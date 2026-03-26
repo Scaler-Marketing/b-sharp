@@ -52,41 +52,34 @@ const Navbar = () => {
         </button>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
-          >
-            <div className="px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-lg font-body transition-colors ${
-                    location.pathname === link.href
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+      {isOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border">
+          <div className="px-6 py-6 flex flex-col gap-4">
+            {navLinks.map((link) => (
               <Link
-                to="/contact"
+                key={link.label}
+                to={link.href}
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm mt-2"
+                className={`text-lg font-body transition-colors ${
+                  location.pathname === link.href
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
-                <Phone className="w-4 h-4" />
-                Check Your Date
+                {link.label}
               </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm mt-2"
+            >
+              <Phone className="w-4 h-4" />
+              Check Your Date
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
