@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.webp";
 
 const Footer = () => {
   return (
@@ -7,8 +8,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
-            <Link to="/" className="font-display text-xl font-bold text-foreground">
-              B-Sharp<span className="text-gradient"> Entertainment</span>
+            <Link to="/" className="flex items-center gap-2">
+              <img src={logo} alt="B-Sharp Entertainment" className="h-10 w-10 rounded-full" />
+              <span className="font-display text-xl font-bold text-foreground">
+                B-Sharp<span className="text-gradient"> Entertainment</span>
+              </span>
             </Link>
             <p className="text-muted-foreground font-body text-sm mt-2">
               Rhode Island & Southern New England's premier wedding DJ and event entertainment company.
