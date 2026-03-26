@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-[48rem] h-[100svh] flex items-center justify-center overflow-x-clip">
+    <section id="hero" className="relative min-h-[48rem] h-[100svh] flex items-center justify-center" style={{ overflowX: 'clip', overflowY: 'visible' }}>
       <div className="absolute inset-0">
         <img
           src={heroBg}
@@ -20,9 +20,9 @@ const Hero = () => {
           Rhode Island & Southern New England
         </p>
 
-        <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] mb-6 md:mb-8 pb-1 md:pb-2 text-balance">
+        <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.15] mb-6 md:mb-8 text-balance">
           The Premier{" "}
-          <span className="text-gradient italic inline-block px-[0.1em]">Wedding DJ</span>
+          <span className="text-gradient italic inline-block px-[0.15em] pb-[0.15em]">Wedding DJ</span>
         </h1>
 
         <blockquote className="max-w-2xl mx-auto text-foreground/80 font-body text-base md:text-xl italic leading-relaxed mb-4 text-balance">
