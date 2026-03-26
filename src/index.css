@@ -84,3 +84,10 @@
     background-color: hsl(var(--surface-elevated));
   }
 }
+
+@keyframes scrollDot {
+  0% { transform: translateY(0); opacity: 1; }
+  60% { transform: translateY(18px); opacity: 0; }
+  61% { transform: translateY(-4px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
