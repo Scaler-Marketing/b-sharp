@@ -17,6 +17,7 @@ const serviceLinks = [
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Gallery", href: "/gallery" },
   { label: "About B-Sharp", href: "/about" },
 ];
 

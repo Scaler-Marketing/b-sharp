@@ -12,6 +12,7 @@ const PhotoBooths = lazy(() => import("./pages/PhotoBooths.tsx"));
 const CorporateEvents = lazy(() => import("./pages/CorporateEvents.tsx"));
 const AboutBSharp = lazy(() => import("./pages/AboutBSharp.tsx"));
 const Contact = lazy(() => import("./pages/Contact.tsx"));
+const Gallery = lazy(() => import("./pages/Gallery.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
               <Route path="/corporate-events" element={<CorporateEvents />} />
               <Route path="/about" element={<AboutBSharp />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/gallery" element={<Gallery />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
