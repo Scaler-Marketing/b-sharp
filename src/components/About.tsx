@@ -53,17 +53,17 @@ const About = () => {
             </div>
             <div className="mt-8 flex items-center gap-6">
               <div className="text-center">
-                <p className="font-display text-3xl font-bold text-gradient">500+</p>
+                <p ref={events.ref as React.Ref<HTMLParagraphElement>} className="font-display text-3xl font-bold text-gradient">{events.count}+</p>
                 <p className="text-muted-foreground font-body text-sm mt-1">Events</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div className="text-center">
-                <p className="font-display text-3xl font-bold text-gradient">15+</p>
+                <p ref={years.ref as React.Ref<HTMLParagraphElement>} className="font-display text-3xl font-bold text-gradient">{years.count}+</p>
                 <p className="text-muted-foreground font-body text-sm mt-1">Years</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div className="text-center">
-                <p className="font-display text-3xl font-bold text-gradient">5★</p>
+                <p ref={stars.ref as React.Ref<HTMLParagraphElement>} className="font-display text-3xl font-bold text-gradient">{stars.count}★</p>
                 <p className="text-muted-foreground font-body text-sm mt-1">Rated</p>
               </div>
             </div>
