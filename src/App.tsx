@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import Index from "./pages/Index.tsx";
 import Weddings from "./pages/Weddings.tsx";
 import PhotoBooths from "./pages/PhotoBooths.tsx";
+import CorporateEvents from "./pages/CorporateEvents.tsx";
 import AboutBSharp from "./pages/AboutBSharp.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/weddings" element={<Weddings />} />
             <Route path="/photo-booths" element={<PhotoBooths />} />
+            <Route path="/corporate-events" element={<CorporateEvents />} />
             <Route path="/about" element={<AboutBSharp />} />
             <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
