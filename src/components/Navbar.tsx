@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <Link
             to="/"
-            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+            className={`text-fluid-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
               location.pathname === "/"
                 ? "text-primary"
                 : "text-muted-foreground hover:text-foreground"
@@ -54,7 +54,7 @@ const Navbar = () => {
 
           <Link
             to="/about"
-            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+            className={`text-fluid-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
               location.pathname === "/about"
                 ? "text-primary"
                 : "text-muted-foreground hover:text-foreground"
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`inline-flex items-center gap-1 text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap outline-none ${
+              className={`inline-flex items-center gap-1 text-fluid-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap outline-none ${
                 isServiceActive
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -94,7 +94,7 @@ const Navbar = () => {
 
           <Link
             to="/gallery"
-            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+            className={`text-fluid-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
               location.pathname === "/gallery"
                 ? "text-primary"
                 : "text-muted-foreground hover:text-foreground"
@@ -105,7 +105,7 @@ const Navbar = () => {
 
           <Link
             to="/testimonials"
-            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+            className={`text-fluid-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
               location.pathname === "/testimonials"
                 ? "text-primary"
                 : "text-muted-foreground hover:text-foreground"
@@ -117,7 +117,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300 whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-body font-semibold text-fluid-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300 whitespace-nowrap"
           >
             <Phone className="w-4 h-4" />
             Check Your Date
