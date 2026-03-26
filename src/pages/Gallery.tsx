@@ -34,8 +34,10 @@ const Gallery = () => {
       <Navbar />
 
       <PageHero
+        eyebrow="Our Work"
         title="Gallery"
-        subtitle="A look at the energy, lighting, and unforgettable moments from real B-Sharp events."
+        description="A look at the energy, lighting, and unforgettable moments from real B-Sharp events."
+        image="/gallery/gallery-1.webp"
       />
 
       <section className="py-20">
