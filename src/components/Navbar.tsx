@@ -40,7 +40,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5">
           <Link
             to="/"
             className={`text-fluid-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
@@ -119,8 +119,7 @@ const Navbar = () => {
             to="/contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-body font-semibold text-fluid-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300 whitespace-nowrap"
           >
-            <Phone className="w-4 h-4" />
-            Check Your Date
+            Contact
           </Link>
         </div>
 
