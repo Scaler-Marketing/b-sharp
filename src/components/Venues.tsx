@@ -30,7 +30,7 @@ const Venues = () => {
           {doubled.map((name, i) => (
             <span
               key={i}
-              className="font-display text-lg md:text-xl text-muted-foreground/40 mx-6 inline-flex items-center gap-6 shrink-0"
+              className="font-display text-fluid-lg text-muted-foreground/40 mx-6 inline-flex items-center gap-6 shrink-0"
             >
               {name}
               <span className="text-primary/30 text-xs">✦</span>

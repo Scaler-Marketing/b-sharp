@@ -61,7 +61,7 @@ const Testimonials = () => {
                   ))}
                 </div>
 
-                <p className="font-body text-foreground/85 leading-relaxed text-[0.95rem] md:text-base mb-6">
+                <p className="font-body text-foreground/85 leading-relaxed text-fluid-sm mb-6">
                   "{t.text}"
                 </p>
 

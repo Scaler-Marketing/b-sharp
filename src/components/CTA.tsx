@@ -5,14 +5,14 @@ const CTA = () => {
   return (
     <section className="py-24 md:py-32">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+        <p className="text-primary font-body text-fluid-sm font-semibold tracking-[0.2em] uppercase mb-4">
           2027 Dates Selling Quickly
         </p>
-        <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight text-balance">
+        <h2 className="font-display text-fluid-4xl font-bold text-foreground mb-6 leading-tight text-balance">
           Everyone's Going to Have a{" "}
           <span className="text-gradient italic">Great Time</span>
         </h2>
-        <p className="text-muted-foreground font-body text-lg md:text-xl max-w-2xl mx-auto mb-10">
+        <p className="text-muted-foreground font-body text-fluid-base max-w-2xl mx-auto mb-10">
           I'll be focused on your music and wedding reception experience,
           building the energy for one epic event. Let's make your celebration
           unforgettable.

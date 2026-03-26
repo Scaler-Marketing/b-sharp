@@ -30,13 +30,13 @@ const Contact = () => {
       <section className="pt-32 pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-primary font-body text-[10px] md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
+            <p className="text-primary font-body text-fluid-xs font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4">
               Let's Talk
             </p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
+            <h1 className="font-display text-fluid-4xl font-bold text-foreground mb-6 text-balance">
               Check Your <span className="text-gradient italic">Date</span>
             </h1>
-            <p className="text-muted-foreground font-body text-base md:text-xl max-w-2xl mx-auto text-balance">
+            <p className="text-muted-foreground font-body text-fluid-base max-w-2xl mx-auto text-balance">
               2027 dates are selling quickly, and I've just opened up the 2028 calendar.
               Let's make your event unforgettable.
             </p>

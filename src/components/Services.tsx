@@ -32,10 +32,10 @@ const Services = () => {
     <section className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+          <p className="text-primary font-body text-fluid-sm font-semibold tracking-[0.2em] uppercase mb-4">
             What We Do
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-balance">
+          <h2 className="font-display text-fluid-3xl font-bold text-foreground text-balance">
             Our <span className="text-gradient italic">Services</span>
           </h2>
         </div>
@@ -59,7 +59,7 @@ const Services = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
               </div>
               <div className="p-8">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors text-balance">
+                <h3 className="font-display text-fluid-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors text-balance">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground font-body leading-relaxed">
