@@ -22,7 +22,7 @@ const Hero = () => {
 
         <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] mb-6 md:mb-8 pb-1 md:pb-2 text-balance">
           The Premier{" "}
-          <span className="text-gradient italic pr-1">Wedding DJ</span>
+          <span className="text-gradient italic inline-block px-[0.1em]">Wedding DJ</span>
         </h1>
 
         <blockquote className="max-w-2xl mx-auto text-foreground/80 font-body text-base md:text-xl italic leading-relaxed mb-4 text-balance">
