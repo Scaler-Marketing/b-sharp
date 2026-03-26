@@ -5,7 +5,6 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import testimonialsHero from "@/assets/testimonials-hero.jpg";
-import Navbar from "@/components/Navbar";
 
 const testimonials = [
   {
