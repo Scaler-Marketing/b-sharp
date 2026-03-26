@@ -17,6 +17,7 @@ const serviceLinks = [
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Gallery", href: "/gallery" },
   { label: "About B-Sharp", href: "/about" },
 ];
 
@@ -75,6 +76,17 @@ const Navbar = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <Link
+            to="/gallery"
+            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+              location.pathname === "/gallery"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Gallery
+          </Link>
 
           <Link
             to="/about"
