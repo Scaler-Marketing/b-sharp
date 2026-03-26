@@ -78,6 +78,17 @@ const Navbar = () => {
           </DropdownMenu>
 
           <Link
+            to="/gallery"
+            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+              location.pathname === "/gallery"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Gallery
+          </Link>
+
+          <Link
             to="/about"
             className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
               location.pathname === "/about"
