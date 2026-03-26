@@ -3,15 +3,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Index from "./pages/Index.tsx";
-import Weddings from "./pages/Weddings.tsx";
-import PhotoBooths from "./pages/PhotoBooths.tsx";
-import CorporateEvents from "./pages/CorporateEvents.tsx";
-import AboutBSharp from "./pages/AboutBSharp.tsx";
-import Contact from "./pages/Contact.tsx";
-import NotFound from "./pages/NotFound.tsx";
+
+const Index = lazy(() => import("./pages/Index.tsx"));
+const Weddings = lazy(() => import("./pages/Weddings.tsx"));
+const PhotoBooths = lazy(() => import("./pages/PhotoBooths.tsx"));
+const CorporateEvents = lazy(() => import("./pages/CorporateEvents.tsx"));
+const AboutBSharp = lazy(() => import("./pages/AboutBSharp.tsx"));
+const Contact = lazy(() => import("./pages/Contact.tsx"));
+const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -32,16 +33,18 @@ const App = () => (
       <BrowserRouter>
         <div className="overflow-x-clip">
           <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/weddings" element={<Weddings />} />
-            <Route path="/photo-booths" element={<PhotoBooths />} />
-            <Route path="/corporate-events" element={<CorporateEvents />} />
-            <Route path="/about" element={<AboutBSharp />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/weddings" element={<Weddings />} />
+              <Route path="/photo-booths" element={<PhotoBooths />} />
+              <Route path="/corporate-events" element={<CorporateEvents />} />
+              <Route path="/about" element={<AboutBSharp />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </div>
       </BrowserRouter>
     </TooltipProvider>
