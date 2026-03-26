@@ -4,6 +4,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import galleryHero from "@/assets/gallery-hero.jpg";
 
 const galleryImages = Array.from({ length: 12 }, (_, i) => ({
   src: `/gallery/gallery-${i + 1}.webp`,
@@ -37,7 +38,7 @@ const Gallery = () => {
         eyebrow="Our Work"
         title="Gallery"
         description="A look at the energy, lighting, and unforgettable moments from real B-Sharp events."
-        image="/gallery/gallery-1.webp"
+        image={galleryHero}
       />
 
       <section className="py-20">
