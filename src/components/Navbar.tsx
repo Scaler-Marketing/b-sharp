@@ -48,6 +48,17 @@ const Navbar = () => {
             Home
           </Link>
 
+          <Link
+            to="/about"
+            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+              location.pathname === "/about"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            About
+          </Link>
+
           <DropdownMenu>
             <DropdownMenuTrigger
               className={`inline-flex items-center gap-1 text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap outline-none ${
@@ -88,16 +99,6 @@ const Navbar = () => {
             Gallery
           </Link>
 
-          <Link
-            to="/about"
-            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
-              location.pathname === "/about"
-                ? "text-primary"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            About B-Sharp
-          </Link>
 
           <Link
             to="/contact"
@@ -157,9 +158,9 @@ const Navbar = () => {
                 </motion.div>
               ))}
 
-              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.25 }}>
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.05 }}>
                 <Link to="/about" onClick={() => setIsOpen(false)} className={`text-lg font-body transition-colors ${location.pathname === "/about" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
-                  About B-Sharp
+                  About
                 </Link>
               </motion.div>
 
