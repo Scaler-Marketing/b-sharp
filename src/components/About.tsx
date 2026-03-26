@@ -2,6 +2,10 @@ import aboutImg from "@/assets/about-brendan.jpg";
 import { useCountUp } from "@/hooks/use-count-up";
 
 const About = () => {
+  const events = useCountUp(500, 2000);
+  const years = useCountUp(15, 1500);
+  const stars = useCountUp(5, 1200);
+
   return (
     <section id="about" className="py-24 md:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-6">
