@@ -51,11 +51,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2 animate-bounce">
+      <button
+        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
+        aria-label="Scroll to next section"
+      >
+        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2 animate-bounce hover:border-primary/50 transition-colors">
           <div className="w-1.5 h-1.5 rounded-full bg-primary" />
         </div>
-      </div>
+      </button>
     </section>
   );
 };
