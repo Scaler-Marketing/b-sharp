@@ -103,6 +103,17 @@ const Navbar = () => {
             Gallery
           </Link>
 
+          <Link
+            to="/testimonials"
+            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+              location.pathname === "/testimonials"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Reviews
+          </Link>
+
 
           <Link
             to="/contact"
