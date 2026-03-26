@@ -22,6 +22,7 @@ const Footer = () => {
               <div className="space-y-2">
                 <Link to="/" className="block text-muted-foreground font-body text-sm hover:text-primary transition-colors">Home</Link>
                 <Link to="/weddings" className="block text-muted-foreground font-body text-sm hover:text-primary transition-colors">Weddings</Link>
+                <Link to="/corporate-events" className="block text-muted-foreground font-body text-sm hover:text-primary transition-colors">Corporate Events</Link>
                 <Link to="/photo-booths" className="block text-muted-foreground font-body text-sm hover:text-primary transition-colors">Photo Booths</Link>
                 <Link to="/about" className="block text-muted-foreground font-body text-sm hover:text-primary transition-colors">About B-Sharp</Link>
               </div>
