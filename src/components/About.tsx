@@ -1,4 +1,4 @@
-import aboutImg from "@/assets/about-brendan.jpg";
+import aboutImg from "@/assets/brendan-dj.jpg";
 import { useCountUp } from "@/hooks/use-count-up";
 
 const About = () => {
