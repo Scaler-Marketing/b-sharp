@@ -56,8 +56,8 @@ const Hero = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
         aria-label="Scroll to next section"
       >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2 animate-bounce hover:border-primary/50 transition-colors">
-          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center hover:border-primary/50 transition-colors overflow-hidden pt-1">
+          <div className="w-1.5 h-1.5 rounded-full bg-primary animate-[scrollDot_1.5s_ease-in-out_infinite]" />
         </div>
       </button>
     </section>
