@@ -4,6 +4,8 @@ import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import testimonialsHero from "@/assets/testimonials-hero.jpg";
+import Navbar from "@/components/Navbar";
 
 const testimonials = [
   {
@@ -38,7 +40,7 @@ const Testimonials = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <PageHero title="What Couples Are Saying" />
+      <PageHero eyebrow="Reviews" title="What Couples Are Saying" image={testimonialsHero} />
 
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6">
