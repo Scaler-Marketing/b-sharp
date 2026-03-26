@@ -1,13 +1,22 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const serviceLinks = [
+  { label: "Weddings", href: "/weddings" },
+  { label: "Corporate Events", href: "/corporate-events" },
+  { label: "Photo Booths", href: "/photo-booths" },
+];
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Weddings", href: "/weddings" },
-  { label: "Photo Booths", href: "/photo-booths" },
-  { label: "Corporate Events", href: "/corporate-events" },
   { label: "About B-Sharp", href: "/about" },
 ];
 
@@ -15,30 +24,72 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  const isServiceActive = serviceLinks.some(
+    (link) => location.pathname === link.href
+  );
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-display text-2xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="font-display text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
           B-Sharp<span className="text-gradient"> Entertainment</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase ${
-                location.pathname === link.href
+          <Link
+            to="/"
+            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+              location.pathname === "/"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Home
+          </Link>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className={`inline-flex items-center gap-1 text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap outline-none ${
+                isServiceActive
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              {link.label}
-            </Link>
-          ))}
+              Services
+              <ChevronDown className="w-3.5 h-3.5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="bg-background/95 backdrop-blur-xl border-border">
+              {serviceLinks.map((link) => (
+                <DropdownMenuItem key={link.label} asChild>
+                  <Link
+                    to={link.href}
+                    className={`w-full cursor-pointer font-body ${
+                      location.pathname === link.href
+                        ? "text-primary"
+                        : ""
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Link
+            to="/about"
+            className={`text-sm font-body font-medium transition-colors duration-300 tracking-wide uppercase whitespace-nowrap ${
+              location.pathname === "/about"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            About B-Sharp
+          </Link>
+
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300 whitespace-nowrap"
           >
             <Phone className="w-4 h-4" />
             Check Your Date
@@ -63,17 +114,27 @@ const Navbar = () => {
             className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link, i) => (
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2 }}>
+                <Link to="/" onClick={() => setIsOpen(false)} className={`text-lg font-body transition-colors ${location.pathname === "/" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
+                  Home
+                </Link>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.05 }}>
+                <span className="text-xs font-body font-semibold uppercase tracking-widest text-muted-foreground/60">Services</span>
+              </motion.div>
+
+              {serviceLinks.map((link, i) => (
                 <motion.div
                   key={link.label}
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2, delay: i * 0.05 }}
+                  transition={{ duration: 0.2, delay: (i + 2) * 0.05 }}
                 >
                   <Link
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-lg font-body transition-colors ${
+                    className={`text-lg font-body transition-colors pl-3 ${
                       location.pathname === link.href
                         ? "text-primary"
                         : "text-muted-foreground hover:text-foreground"
@@ -83,15 +144,18 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2, delay: navLinks.length * 0.05 }}
-              >
+
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.25 }}>
+                <Link to="/about" onClick={() => setIsOpen(false)} className={`text-lg font-body transition-colors ${location.pathname === "/about" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
+                  About B-Sharp
+                </Link>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.3 }}>
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm mt-2"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground font-body font-semibold text-sm mt-2 whitespace-nowrap"
                 >
                   <Phone className="w-4 h-4" />
                   Check Your Date
