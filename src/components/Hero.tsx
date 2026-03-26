@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20 md:pt-32 pb-20">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-28 md:pt-32 pb-20"> pb-20">
         <p className="text-primary font-body text-[10px] md:text-base font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 md:mb-6">
           Rhode Island & Southern New England
         </p>
