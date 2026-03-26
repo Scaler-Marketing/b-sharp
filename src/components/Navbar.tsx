@@ -180,6 +180,18 @@ const Navbar = () => {
               </motion.div>
 
               <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.3 }}>
+                <Link to="/gallery" onClick={() => setIsOpen(false)} className={`text-lg font-body transition-colors ${location.pathname === "/gallery" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
+                  Gallery
+                </Link>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.35 }}>
+                <Link to="/testimonials" onClick={() => setIsOpen(false)} className={`text-lg font-body transition-colors ${location.pathname === "/testimonials" ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
+                  Reviews
+                </Link>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.2, delay: 0.4 }}>
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
