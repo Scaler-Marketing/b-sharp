@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Weddings", href: "/weddings" },
   { label: "Photo Booths", href: "/photo-booths" },
+  { label: "Corporate Events", href: "/corporate-events" },
   { label: "About B-Sharp", href: "/about" },
 ];
 

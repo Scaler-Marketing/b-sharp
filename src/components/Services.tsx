@@ -16,7 +16,7 @@ const services = [
     description:
       "Professional, polished entertainment for galas, holiday parties, fundraisers, and corporate celebrations of all sizes.",
     image: corporateImg,
-    link: "/contact",
+    link: "/corporate-events",
   },
   {
     title: "Photo Booths",
